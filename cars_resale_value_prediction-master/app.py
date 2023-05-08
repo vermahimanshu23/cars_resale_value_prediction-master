@@ -184,6 +184,30 @@ def form_audi():
 
 @app.route('/form/bmw', methods=['GET','POST'])
 def form_bmw():
+    if request.method == 'POST':
+        transmission = request.form.get('transmission')
+        fueltype = request.form.get('fueltype')
+        carmodel = request.form.get('carmodel')
+        year = request.form.get('year')
+        mileage = request.form.get('mileage')
+        tax = request.form.get('tax')
+        mpg = request.form.get('mpg')
+        enginesize = request.form.get('enginesize')
+        model = joblib.load('bmw\svr_model.pkl')
+        X = pd.DataFrame({
+            "model":[carmodel],
+            "year":[year],
+            "transmission":[transmission],
+            "mileage":[mileage],
+            "fuelType":[fueltype],
+            "tax":[tax],
+            "mpg":[mpg],
+            "engineSize":[enginesize]
+        })
+        print(X.to_dict())
+        result = model.predict(X)[0]
+        session['predicted'] = result
+        return redirect('/form/bmw')
     return render_template('bmw_form.html')
 
 @app.route('/form/focus', methods=['GET','POST'])
