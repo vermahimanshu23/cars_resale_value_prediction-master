@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block css %}{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-6 mx-auto">
+            <form class="card" method="post">
+                <img src="\static\ford.jpeg" alt="" class="card-img" height="250">
+                <div class="card-header">
+                    <h3 class="text-center card-title">Enter Ford Details</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="transmission" class="form-label">Transmission</label>
+                        <select class="form-select form-select-lg" name="transmission" id="transmission">
+                            <option selected disabled>Select one</option>
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                            <option value="Semi-Auto">Semi-Auto</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fueltype" class="form-label">Fuel Type</label>
+                        <select class="form-select form-select-lg" name="fueltype" id="fueltype">
+                            <option selected disabled>Select one</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carmodel" class="form-label">Model</label>
+                        <select class="form-select form-select-lg" name="carmodel" id="carmodel">
+                            <option selected disabled>Select one</option>
+                            <option value="Fiesta">Fiesta</option>
+                            <option value="Focus">Focus</option>
+                            <option value="Puma">Puma</option>
+                            <option value="Kuga">Kugar</option>
+                            <option value="EcoSport">EcoSport</option>
+                            <option value="C-MAX">C-MAX</option>
+                            <option value="Mondeo">Mondeo</option>
+                            <option value="Ka+">Ka+</option>
+                            <option value="Tourneo Custom">Tourneo Custom</option>
+                            <option value="B-MAX">B-MAX</option>
+                            <option value="S-MAX">S-MAX</option>
+                            <option value="Galaxy">Galaxy</option>
+                            <option value="Grand Tourneo Connect">Grand Tourneo Connect</option>
+                           
+                        </select>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="year" id="year" placeholder="Enter Year">
+                      <label for="year">Year</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="mileage" id="mileage" placeholder="Enter mileage">
+                      <label for="mileage">Mileage</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="tax" id="tax" placeholder="enter tax amount">
+                      <label for="tax">Tax</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="mpg" id="mpg" placeholder="enter mpg performance">
+                      <label for="mpg">Miles per gallon</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="enginesize" id="enginesize" placeholder="enter engine size">
+                      <label for="enginesize">engine size</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-success">Predict Resale Price</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block js %}{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block css %}{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-6 mx-auto">
+            <form class="card" method="post">
+                <img src="/static\bmw_PNG99548.png" alt="" class="card-img" height="300">
+                <div class="card-header">
+                    <h3 class="text-center card-title">Enter BMW Details</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="transmission" class="form-label">Transmission</label>
+                        <select class="form-select form-select-lg" name="transmission" id="transmission">
+                            <option selected disabled>Select one</option>
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                            <option value="Semi-Auto">Semi-Auto</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fueltype" class="form-label">Fuel Type</label>
+                        <select class="form-select form-select-lg" name="fueltype" id="fueltype">
+                            <option selected disabled>Select one</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carmodel" class="form-label">Model</label>
+                        <select class="form-select form-select-lg" name="carmodel" id="carmodel">
+                            <option selected disabled>Select one</option>
+                            <option value="1 Series">1 Series</option>
+                            <option value="2 Series">2 Series</option>
+                            <option value="3 Series">3 Series</option>
+                            <option value="4 Series">4 Series</option>
+                            <option value="5 Series">5 Series</option>
+                            <option value="X1">X1</option>
+                            <option value="X2">X2</option>
+                            <option value="X3">X3</option>
+                            <option value="X4">X4</option>
+                            <option value="X5">X5</option>
+                            <option value="X6">X6</option>
+                            <option value="X7">X7</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                            <option value="M3">M3</option>
+                            <option value="M4">M4</option>
+                            <option value="M5">M5</option>
+                            <option value="M6">M6</option>
+                            <option value="Z1">Z1</option>
+                            <option value="Z2">Z2</option>
+                            <option value="Z3">Z3</option>
+                            <option value="Z4">Z4</option>
+                            <option value="i1">i1</option>
+                            <option value="i2">i2</option>
+                            <option value="i3">i3</option>
+                            <option value="i4">i4</option>
+                            </select>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="year" id="year" placeholder="Enter Year">
+                      <label for="year">Year</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="mileage" id="mileage" placeholder="Enter mileage">
+                      <label for="mileage">Mileage</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="tax" id="tax" placeholder="enter tax amount">
+                      <label for="tax">Tax</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="mpg" id="mpg" placeholder="enter mpg performance">
+                      <label for="mpg">Miles per gallon</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control" name="enginesize" id="enginesize" placeholder="enter engine size">
+                      <label for="enginesize">engine size</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-success">Predict Resale Price</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}{% endblock %}
