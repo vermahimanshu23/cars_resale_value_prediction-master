@@ -4,102 +4,88 @@
 {% block content %}
 
 <div class="container">
-    <div class="row my-3">
-        <div class="col-md-6 mx-auto">
-            <form class="card" method="post">
-                <img src="\static\Emblème-Hyundai.jpg" alt="" class="card-img" height="260">
-                <div class="card-header">
-                    <h3 class="text-center card-title">Enter Hyundi Details</h3>
-                </div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <label for="transmission" class="form-label">Transmission</label>
-                        <select class="form-select form-select-lg" name="transmission" id="transmission">
-                            <option selected disabled>Select one</option>
-                            <option value="Automatic">Automatic</option>
-                            <option value="Manual">Manual</option>
-                            <option value="Semi-Auto">Semi-Auto</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="fueltype" class="form-label">Fuel Type</label>
-                        <select class="form-select form-select-lg" name="fueltype" id="fueltype">
-                            <option selected disabled>Select one</option>
-                            <option value="Petrol">Petrol</option>
-                            <option value="Diesel">Diesel</option>
-                            <option value="Hybrid">Hybrid</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="carmodel" class="form-label">Model</label>
-                        <select class="form-select form-select-lg" name="carmodel" id="carmodel">
-                            <option selected disabled>Select one</option>
-                            <option value="A1">A1</option>
-                            <option value="A3">A3</option>
-                            <option value="A4">A4</option>
-                            <option value="A5">A5</option>
-                            <option value="A6">A6</option>
-                            <option value="A8">88</option>
-                            <option value="A7">A7</option>
-                            <option value="Q3">Q3</option>
-                            <option value="Q5">Q5</option>
-                            <option value="Q2">Q2</option>
-                            <option value="Q7">Q7</option>
-                            <option value="Q8">Q8</option>
-                            <option value="S4">S4</option>
-                            <option value="S5">S5</option>
-                            <option value="S3">S3</option>
-                            <option value="S8">S8</option>
-                            <option value="S7">S7</option>
-                            <option value="TT">TT</option>
-                            <option value="RS1">RS1</option>
-                            <option value="RS3">RS3</option>
-                            <option value="RS4">RS4</option>
-                            <option value="RS5">RS5</option>
-                            <option value="RS6">RS6</option>
-                            <option value="RS7">RS7</option>
-                            <option value="SQ7">SQ7</option>
-                            <option value="SQ5">SQ5</option>
-                            </select>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input
-                        type="number"
-                        class="form-control" name="year" id="year" placeholder="Enter Year">
-                      <label for="year">Year</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input
-                        type="number"
-                        class="form-control" name="mileage" id="mileage" placeholder="Enter mileage">
-                      <label for="mileage">Mileage</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input
-                        type="number"
-                        class="form-control" name="tax" id="tax" placeholder="enter tax amount">
-                      <label for="tax">Tax</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input
-                        type="number"
-                        class="form-control" name="mpg" id="mpg" placeholder="enter mpg performance">
-                      <label for="mpg">Miles per gallon</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input
-                        type="number"
-                        class="form-control" name="enginesize" id="enginesize" placeholder="enter engine size">
-                      <label for="enginesize">engine size</label>
-                    </div>
-                    <div class="d-grid gap-2">
-                      <button class="btn btn-success">Predict Resale Price</button>
-                    </div>
-                </div>
-            </form>
+  <div class="row my-3">
+    <div class="col-md-6 mx-auto">
+      <form class="card" method="post">
+        <img src="\static\Emblème-Hyundai.jpg" alt="" class="card-img" height="260">
+        <div class="card-header">
+          <h3 class="text-center">
+            Resale Value is : ${{session.hyundi_price}}
+          </h3>
         </div>
+        <div class="card-header">
+          <h3 class="text-center card-title">Enter Hyundi Details</h3>
+        </div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="transmission" class="form-label">Transmission</label>
+            <select class="form-select form-select-lg" name="transmission" id="transmission">
+              <option selected disabled>Select one</option>
+              <option value="Automatic">Automatic</option>
+              <option value="Manual">Manual</option>
+              <option value="Semi-Auto">Semi-Auto</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="fueltype" class="form-label">Fuel Type</label>
+            <select class="form-select form-select-lg" name="fueltype" id="fueltype">
+              <option selected disabled>Select one</option>
+              <option value="Petrol">Petrol</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="carmodel" class="form-label">Model</label>
+            <select class="form-select form-select-lg" name="carmodel" id="carmodel">
+              <option selected disabled>Select one</option>
+
+              <option value="I20">I20</option>
+              <option value="Tucson">Tucson</option>
+              <option value="I10">I10</option>
+              <option value="IX35">IX35</option>
+              <option value="I30">I30</option>
+              <option value="I40">I40</option>
+              <option value="ioniq">Ioniq</option>
+              <option value="Kona">Kona</option>
+              <option value="I800">I800</option>
+              <option value="IX20">IX20</option>
+              <option value="Veloster">Veloster</option>
+              <option value="Santa Fe">Santa Fe</option>
+              <option value="Getz">Getz</option>
+              <option value="Amica">Amica</option>
+
+
+            </select>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" name="year" id="year" placeholder="Enter Year">
+            <label for="year">Year</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" name="mileage" id="mileage" placeholder="Enter mileage">
+            <label for="mileage">Mileage</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" name="tax" id="tax" placeholder="enter tax amount">
+            <label for="tax">Tax</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" name="mpg" id="mpg" placeholder="enter mpg performance">
+            <label for="mpg">Miles per gallon</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" name="enginesize" id="enginesize" placeholder="enter engine size">
+            <label for="enginesize">engine size</label>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-success">Predict Resale Price</button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
 {% endblock %}
 {% block js %}{% endblock %}
